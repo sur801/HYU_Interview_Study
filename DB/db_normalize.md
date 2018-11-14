@@ -2,7 +2,8 @@
 >관계형 데이터베이스의 설계에서 중복을 최소화하게 데이터를 구조화하는 프로세스를 말함.
 
 일단 관계형 데이터베이스 (이하 RDBMS)를 모르니 간단하게 설명하고 넘어갑시다.
-image1
+
+![image1](https://user-images.githubusercontent.com/26535709/48506933-ef711b00-e88d-11e8-87b3-cff1b6d850cf.png)
 
 RDBS는 table로 이루어져 있으며, 이 table은 key와 value의 관계를 나타냅니다. 이렇게 data끼리의 종속성을 relationship으로 표현하는 것이 RDBMS의 특징이죠.
 
