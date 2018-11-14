@@ -1,5 +1,4 @@
 # DB 정규화
-===============================
 >관계형 데이터베이스의 설계에서 중복을 최소화하게 데이터를 구조화하는 프로세스를 말함.
 
 일단 관계형 데이터베이스 (이하 RDBMS)를 모르니 간단하게 설명하고 넘어갑시다.
@@ -16,11 +15,11 @@ RDBS는 table로 이루어져 있으며, 이 table은 key와 value의 관계를 
 한 테이블의 모든 행은 같은 수의 열을 가지고 있습니다.
 이러한 행은 튜플(tuple) 또는 레코드(record)라고도 불립니다.
 
-#####값(value)
+##### 값(value)
 테이블은 각각의 행과 열에 대응하는 값을 가지고 있습니다.
 이러한 값은 열의 타입에 맞는 값이어야 합니다.
 
-#####키(key)
+##### 키(key)
 테이블에서 행의 식별자로 이용되는 열을 키(key) 또는 기본 키(primary key)라고 합니다.
 즉, 테이블에 저장된 레코드를 고유하게 식별하는 후보 키(candidate key) 중에서 데이터베이스 설계자가 지정한 속성을 의미합니다.
 키는 정규화를 할 때 자주 나오므로, 조금만 더 자세하게 봅시다.
@@ -34,7 +33,11 @@ RDBS는 table로 이루어져 있으며, 이 table은 key와 value의 관계를 
 
 
 image2
-
+|  <center>Header1</center> |  <center>Header2</center> |  <center>Header3</center> |
+|:--------|:--------:|--------:|
+|**cell 1x1** | <center>cell 1x2 </center> |*cell 1x3* |
+|**cell 2x1** | <center>cell 2x2 </center> |*cell 2x3* |
+|**cell 3x1** | <center>cell 3x2 </center> |*cell 3x3* |
 
 
 
@@ -65,13 +68,13 @@ RDBMS의 특징은 다음과 같습니다.
 
 이 table에서 규리라는 name을 가진 entity를 볼까요? 현재 이 entity는 규리라는 하나의 row가 class라는 column에서 값을 2개나 가졌네요. 이런 경우 한 개의 row를 더 만들어주어 column이 Atomic Value를 가지게 해줍니다. 다음과 같이 변하겠죠
 
-|id|name|major|class|
-|---|:---:|---:|
-|1|규리|CS|Algorithm|
-|2|규리|CS|OS|
-|3|진명|CS|DBMS|
-|4|진명|CS|Vision
-|5|유림|CS|Network|
+id|name|major|class
+---|:---:|---:
+1|규리|CS|Algorithm
+2|규리|CS|OS
+3|진명|CS|DBMS
+4|진명|CS|Vision
+5|유림|CS|Network
 
 왜 이런 짓을 할까요?? RDBMS는 모든 속성이 Atomic Value를 가지는 특성이 있기 때문에, 최소한 제 1 정규형을 만족해야 relation이 될 자격이 있습니다.
 
