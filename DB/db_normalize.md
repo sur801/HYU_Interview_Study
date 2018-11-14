@@ -62,6 +62,8 @@ RDBS는 table로 이루어져 있으며, 이 table은 key와 value의 관계를 
 
 
 ## 2NF(Second Normal Form : 제 2 정규화)
+>primary key가 아닌 모든 attribute가 primary key에 FFD 여야 한다.
+
 1NF만 만족시키는 relation에서는 insert, update, delete에 여전히 이상현상이 일어날 수 있습니다.
 2NF에서는 table의 모든 column이 FFD(Full Functional Dependency : 완전함수적 종속성)을 가지게 합니다. 규리는 함수적 종속성 자체가 뭔지도 모르니 잠깐 간단하게 알려주고 갑시다.
 
