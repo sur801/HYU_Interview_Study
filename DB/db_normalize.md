@@ -1,9 +1,10 @@
+~~_아 md 파일로 쓰는게 git에 올릴 때 더 좋을 것 같았는데 안 되는 게 너무 많네요 github.io 구축을 안 해서 그런가 걍 다음부턴 pdf로 올려야지 새벽에 개뻘짓했네_~~
 # DB 정규화
 >관계형 데이터베이스의 설계에서 중복을 최소화하게 데이터를 구조화하는 프로세스를 말함.
 
 일단 관계형 데이터베이스 (이하 RDBMS)를 모르니 간단하게 설명하고 넘어갑시다.
 
-![image1](https://user-images.githubusercontent.com/26535709/48506933-ef711b00-e88d-11e8-87b3-cff1b6d850cf.png)
+<img src = "https://user-images.githubusercontent.com/26535709/48506933-ef711b00-e88d-11e8-87b3-cff1b6d850cf.png" width = 80%>
 
 RDBS는 table로 이루어져 있으며, 이 table은 key와 value의 관계를 나타냅니다. 이렇게 data끼리의 종속성을 relationship으로 표현하는 것이 RDBMS의 특징이죠.
 
@@ -55,21 +56,11 @@ RDBMS의 특징은 다음과 같습니다.
 ### 1NF(First Normal Form : 제 1 정규화)
 1NF에서는 각 row마다 column의 값이 1개씩만 있어야 해요. 이를 통해 모든 column이 Atomic Value를 갖게 해줍니다. 예를들어, 다음과 같은 table이 있다고 생각해 봅시다.
 
-|id|name|major|class|
-|---|:---:|---:|
-|1|규리|CS|OS, Algorithm|
-|2|진명|CS|DBMS, Vision|
-|3|유림|CS|Network|
+<img src =https://user-images.githubusercontent.com/26535709/48507679-f1d47480-e88f-11e8-904d-2f4373f563a1.png width = "50%">
 
 이 table에서 규리라는 name을 가진 entity를 볼까요? 현재 이 entity는 규리라는 하나의 row가 class라는 column에서 값을 2개나 가졌네요. 이런 경우 한 개의 row를 더 만들어주어 column이 Atomic Value를 가지게 해줍니다. 다음과 같이 변하겠죠
 
-id|name|major|class
----|:---:|---:
-1|규리|CS|Algorithm
-2|규리|CS|OS
-3|진명|CS|DBMS
-4|진명|CS|Vision
-5|유림|CS|Network
+<img src="https://user-images.githubusercontent.com/26535709/48507689-f862ec00-e88f-11e8-9afc-1f663400d240.png" width = "50%">
 
 왜 이런 짓을 할까요?? RDBMS는 모든 속성이 Atomic Value를 가지는 특성이 있기 때문에, 최소한 제 1 정규형을 만족해야 relation이 될 자격이 있습니다.
 
@@ -79,7 +70,9 @@ id|name|major|class
 2NF에서는 table의 모든 column이 FFD(Full Functional Dependency : 완전함수적 종속성)을 가지게 합니다. 규리는 함수적 종속성 자체가 뭔지도 모르니 잠깐 간단하게 알려주고 갑시다.
 
 #### FFD(Full Functional Dependency : 완전함수적 종속성)
-먼저 determinant라는 것이 있는데,
+먼저 determinant라는 것이 있는데, 이는 주어진 relation에서 다른 attribute들을 고유하게 결정하는 하나 이상의 attribute입니다. 예를들어, 
+
+하여튼 2NF에서는 모든 column이 FFD를 만족하게 합니다. 즉, primary key 중에 특정 column에만 종속된 column(부분적 종속)이 없어야 한다는 겁니다. 
 
 
 ### 3NF(Third Normal Form : 제 3 정규화)
