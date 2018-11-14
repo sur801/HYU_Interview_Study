@@ -6,20 +6,20 @@ image1
 
 RDBS는 table로 이루어져 있으며, 이 table은 key와 value의 관계를 나타냅니다. 이렇게 data끼리의 종속성을 relationship으로 표현하는 것이 RDBMS의 특징이죠.
 
-##### 열(column)
+#### 열(column)
 각각의 열은 유일한 이름을 가지고 있으며, 자신만의 타입을 가지고 있습니다.
 이러한 열은 필드(field) 또는 속성(attribute)이라고도 불립니다.
 
-##### 행(row)
+#### 행(row)
 행은 관계된 데이터의 묶음을 의미합니다.
 한 테이블의 모든 행은 같은 수의 열을 가지고 있습니다.
 이러한 행은 튜플(tuple) 또는 레코드(record)라고도 불립니다.
 
-##### 값(value)
+#### 값(value)
 테이블은 각각의 행과 열에 대응하는 값을 가지고 있습니다.
 이러한 값은 열의 타입에 맞는 값이어야 합니다.
 
-##### 키(key)
+#### 키(key)
 테이블에서 행의 식별자로 이용되는 열을 키(key) 또는 기본 키(primary key)라고 합니다.
 즉, 테이블에 저장된 레코드를 고유하게 식별하는 후보 키(candidate key) 중에서 데이터베이스 설계자가 지정한 속성을 의미합니다.
 키는 정규화를 할 때 자주 나오므로, 조금만 더 자세하게 봅시다.
@@ -29,16 +29,10 @@ RDBS는 table로 이루어져 있으며, 이 table은 key와 value의 관계를 
 - **대체키 (Alternate Key)** : 후보키 중 기본키를 제외한 나머지 후보키
 - **슈퍼키 (Super Key)** : 슈퍼키 또는 합성키라 불린다. 하나의 열이 키로사용되는 것이 아닌 2개 이상의 열이 합쳐서 기본키로 사용하는 것이다.
 
-##### functional dependency(함수적 종속)
+#### functional dependency(함수적 종속)
 
 
 image2
-|  <center>Header1</center> |  <center>Header2</center> |  <center>Header3</center> |
-|:--------|:--------:|--------:|
-|**cell 1x1** | <center>cell 1x2 </center> |*cell 1x3* |
-|**cell 2x1** | <center>cell 2x2 </center> |*cell 2x3* |
-|**cell 3x1** | <center>cell 3x2 </center> |*cell 3x3* |
-
 
 
 RDBMS의 특징은 다음과 같습니다.
@@ -83,7 +77,7 @@ id|name|major|class
 1NF만 만족시키는 relation에서는 insert, update, delete에 여전히 이상현상이 일어날 수 있습니다.
 2NF에서는 table의 모든 column이 FFD(Full Functional Dependency : 완전함수적 종속성)을 가지게 합니다. 규리는 함수적 종속성 자체가 뭔지도 모르니 잠깐 간단하게 알려주고 갑시다.
 
-##### FFD(Full Functional Dependency : 완전함수적 종속성)
+#### FFD(Full Functional Dependency : 완전함수적 종속성)
 먼저 determinant라는 것이 있는데,
 
 
