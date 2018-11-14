@@ -119,8 +119,17 @@ attribute = [학번, 과목코드, 성적, 학부, 등록금]
 2NF에 속하면서, primary key가 아닌 모든 attribute가 primary key에 종속이 되지 않으면 제 3정규형이다.
 X-> Z이고, Y->Z라면 X-> Z가 된다. 이 때 Z가 X에 대해 종속되었다고 하며, 이러한 종속성을 TFD(Transitive Functional Dependency : 이행적 함수 종속)이라고 한다. 3NF에선 이러한 TFD를 없앤다.
 
+- 학번 -> 학부 
+- 학번 -> 등록금 
+- 학부 -> 등록금 
+
+3NF에선 
+1. table이 2NF를 만족하고
+2. table 내의 모든 attribute가 primary key에만 의존해야하며, 다른 후보 키에 의존하지 않아야 한다.
+아까 [학번, 학부, 등록금] attribute를 갖던 table을 [학번, 학부], [학부, 등록금]으로 나눠주면 된다.
 
 
+그러나 3NF를 해도 이상현상은 없어지지 않는다. primary key가 될 수 있는 후보 키가 여러개라면 relation에선 3NF를 만족하더라도 이상현상이 생긴다. 이를 위해 BNF(==strong 3NF)가 나왔다.
 
 출처:
 - http://tcpschool.com/mysql/mysql_intro_relationalDB
