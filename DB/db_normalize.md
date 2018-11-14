@@ -126,8 +126,9 @@ X-> Z이고, Y->Z라면 X-> Z가 된다. 이 때 Z가 X에 대해 종속되었�
 - 학부 -> 등록금 
 
 3NF에선 
-1. table이 2NF를 만족하고
-2. table 내의 primary key가 아닌 모든 attribute가 primary key에만 의존해야하며, 다른 후보 키에 의존하지 않아야 한다.
+>1. table이 2NF를 만족하고
+>2. table 내의 primary key가 아닌 모든 attribute가 primary key에만 의존해야하며, 다른 후보 키에 의존하지 않아야 한다.
+
 아까 [학번, 학부, 등록금] attribute를 갖던 table을 [학번, 학부], [학부, 등록금]으로 나눠주면 된다.
 
 
