@@ -18,6 +18,7 @@ Java 파일 실행을 위한 환경. JVM이 실행되도록 도와주는 역할�
 
 #### JDK (Java Development Kit)
 말 그대로 자바 개발을 위한 도구(Kit)이다. 자바 컴파일러(Javac), 자바가상머신(JVM) 등 각종 Java Library 등을 포함하고 있어 자바 개발을 위한 필수 Kit이다! JDK는 JRE를 포함하고 있어요. (JDK설치하면 JRE도 설치됨)
+
 <img src = "https://user-images.githubusercontent.com/26535709/49169051-4857ad80-f37c-11e8-8350-7b2faf63ae6a.jpg" width = 50%>
 
 
@@ -32,13 +33,16 @@ JVM은 compiler time이 아닌 runtime 시에 처음으로
 
 ### Runtime Data Areas
 runtime data 영역은 JVM이라는 프로그램이 OS 위에서 실행되면서 할당받는 메모리 영역이다. runtime data area는 5개의 area로 나눌 수 있다. 이 중 PC Register, JVM Stack, Natvie Method Stack은 thread마다 하나씩 생성되며 Heap, Method Area는 모든 thread가 공유해서 사용한다.
-<img src = "https://user-images.githubusercontent.com/26535709/49169047-47bf1700-f37c-11e8-99e6-e6f53d7fadf1.png" width = 50%>
+
+<img src = "https://user-images.githubusercontent.com/26535709/49169047-47bf1700-f37c-11e8-99e6-e6f53d7fadf1.png" width = 40%>
 
 ### Java의 실행 과정
 1. User가 Java 코드 생성
 2. JDK로 컴파일(.class 파일 생성)
 3. JVM을 통해 Java Byte Code로 변환.
 4. JRE로 실행
+
+<img src = "https://user-images.githubusercontent.com/26535709/49169049-4857ad80-f37c-11e8-9a62-63df42784253.png" width = 40%>
 
 
 <출처>
