@@ -42,7 +42,7 @@ runtime data 영역은 JVM이라는 프로그램이 OS 위에서 실행되면서
 3. JVM을 통해 Java Byte Code로 변환.
 4. JRE로 실행
 
-<img src = "https://user-images.githubusercontent.com/26535709/49169049-4857ad80-f37c-11e8-9a62-63df42784253.png" width = 40%>
+<img src = "https://user-images.githubusercontent.com/26535709/49169049-4857ad80-f37c-11e8-9a62-63df42784253.png" width = 50%>
 
 
 <출처>
