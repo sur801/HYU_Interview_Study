@@ -13,11 +13,12 @@ Java Byte Code는 JVM이 실행하는 명령어 집합이다. 컴파일하면 �
 
 #### JRE (Java Run Environment)
 Java 파일 실행을 위한 환경. JVM이 실행되도록 도와주는 역할을 한다. JVM이 자바 프로그램을 동작시킬 때 필요한 library file들과 기타 file들을 가지고 있다. JRE는 JVM의 실행환경을 구현한 것이라고 할 수 있다. 자바 개발이 필요 없고 실행만을 원한다면 JRE만 설치하면 됨.
-<image2>
+<img src = "https://user-images.githubusercontent.com/26535709/49169050-4857ad80-f37c-11e8-89e0-2beb6b092225.jpg" width = 80%>
 
 #### JDK (Java Development Kit)
 말 그대로 자바 개발을 위한 도구(Kit)이다. 자바 컴파일러(Javac), 자바가상머신(JVM) 등 각종 Java Library 등을 포함하고 있어 자바 개발을 위한 필수 Kit이다! JDK는 JRE를 포함하고 있어요. (JDK설치하면 JRE도 설치됨)
-<image3>
+<img src = "https://user-images.githubusercontent.com/26535709/49169051-4857ad80-f37c-11e8-8350-7b2faf63ae6a.jpg" width = 80%>
+
 
 
 
@@ -30,7 +31,7 @@ JVM은 compiler time이 아닌 runtime 시에 처음으로
 
 ### Runtime Data Areas
 runtime data 영역은 JVM이라는 프로그램이 OS 위에서 실행되면서 할당받는 메모리 영역이다. runtime data area는 5개의 area로 나눌 수 있다. 이 중 PC Register, JVM Stack, Natvie Method Stack은 thread마다 하나씩 생성되며 Heap, Method Area는 모든 thread가 공유해서 사용한다.
-<image4>
+<img src = "https://user-images.githubusercontent.com/26535709/49169047-47bf1700-f37c-11e8-99e6-e6f53d7fadf1.png" width = 80%>
 
 ### Java의 실행 과정
 1. User가 Java 코드 생성
