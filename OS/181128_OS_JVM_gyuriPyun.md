@@ -28,7 +28,7 @@ Java 파일 실행을 위한 환경. JVM이 실행되도록 도와주는 역할�
 .javac (자바 소스 코드)를 .class (Byte Code)로 변환한다.
 
 ### Class Loader
-Java는 class를 동적으로 읽어온다. 즉, runtime에 모든 코드가 JVM에 링크된다. 모든 class는 그 class가 참조되는 순간에 동적으로 JVM에 링크되며, 메모리에 로딩된다.
+Java는 class를 동적으로 읽어온다. 즉, runtime에 모든 코드가 JVM에 링크된다. 모든 class는 그 class가 참조되는 순간에 동적으로 JVM에 링크되며, 메모리에 로딩된다. 이러한 dynamic class loading은 java의 Class Loader System을 통해서 이루어져요. 자바가 기본적으로 제공하는 classloader는 java.lang.ClassLoader를 통해서 표현됩니다.
 JVM은 compiler time이 아닌 runtime 시에 처음으로
 
 ### Runtime Data Areas
@@ -42,7 +42,7 @@ runtime data 영역은 JVM이라는 프로그램이 OS 위에서 실행되면서
 3. JVM을 통해 Java Byte Code로 변환.
 4. JRE로 실행
 
-<img src = "https://user-images.githubusercontent.com/26535709/49169049-4857ad80-f37c-11e8-9a62-63df42784253.png" width = 50%>
+<img src = "https://user-images.githubusercontent.com/26535709/49169049-4857ad80-f37c-11e8-9a62-63df42784253.png" width = 60%>
 
 
 <출처>
